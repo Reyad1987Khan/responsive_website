@@ -1,116 +1,185 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-
-  *{
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  }
+}
 
-
-  body{
+body{
     font-family: "Montserrat", sans-serif;
-  }
+}
 
-
-  /* Navigation Design  */
-  nav {
+.navigation{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background: #1E2634;
-    padding: 0rem 4rem 0rem 4rem;
-    height: 5rem;
-    width: 100%;
-  }
-
-  .logo {
-    font-size: 2rem;
-    font-weight: bold;
-    color: #fff;
-  }
-
-  .logo img {
-    width: 4rem;
+    padding: 0rem 3rem 0rem 3rem;
+    background-color: #1C2634;
     height: 4rem;
-  }
+    width: 100%;
 
-  .logo {
+}
+
+.manu-btn {
+    display: none;
+}
+#click{
+    display: none;
+}
+
+.navigation ul{
+  display: flex;
+}
+.navigation ul li{
+  list-style-type: none;
+  margin: 0rem .6rem;
+}
+
+.navigation ul li a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    padding: .5rem .6rem;
+    text-transform: uppercase;
+    transition: .5s ease;
+    border-radius: .3rem;
+    }
+.navigation ul li a:hover,.navigation ul li a.active{
+     background: #667181;
+        }
+
+.logo{
     display: flex;
     align-items: center;
-  }
-  .logo h3{
-    margin-left: .5rem;
-  }
-  nav ul {
+    }
+
+.logo img{
+    height: 3rem;
+    width: 3rem;
+}
+.logo h3{
+   color: #fff;
+   padding-left: 1rem;
+}
+
+
+/* Media Breackpoint  */
+@media only screen and (max-width: 58.8rem) {
+    .navigation ul{
+        position: fixed;
+        flex-direction: column;
+        align-items: center;
+        top:4rem;
+        height: 100vh;
+        left: -100%;
+        width: 100%;
+        padding: 2rem;
+        background-color: #131D27;
+        /* Learn  */
+        transition: all .5s ease;
+    }
+    .navigation ul li{
+        padding: 4rem 0rem;
+    }
+    .navigation ul li{
+        font-size: 2rem;
+    }
+    /* Learn  */
+    .navigation ul li a:hover,.navigation ul li a.active{
+        background: none;
+        color: red;
+    }
+    .manu-btn{
+        display: block;
+        color: #fff;
+        font-size: 2rem;
+        cursor: pointer;
+    }
+    #click:checked ~ ul{
+        left:0%;
+    }
+    #click:checked ~ .manu-btn i::before{
+        content: "\f00d";
+    }
+
+}
+
+/* Header Section start  */
+header {
+    background-image: url('./images/logo/pic.png');
+    height: 90vh;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center ;
+}
+header h3 {
     display: flex;
-  }
-  nav ul li{
-    list-style-type: none;
-    margin: 0rem 1rem;
-  }
-  nav ul li a{
-    text-decoration: none;
+    justify-content: center;
+    padding-top: 20rem;
+    color: blue;
+    font-size: 3rem;
+    text-shadow: 2px 2px 8px #eca011;
+}
+
+
+/* Services Part  */
+
+.first-section {
+    background-color: #16213E;
+    height: 100vh;
+}
+.first-section>h2{
+    color: #eca011;
     font-size: 1.5rem;
-    font-weight: bold;
-    color: #fff;
-    text-transform: uppercase; 
-    padding: .7rem 1.2rem ;
-    transition: 0.5s;
-    border-radius: .3rem;
-  }
-  nav ul li a:hover,nav ul li a.active{
-    background: #5F5C5C;
-  }
-  .manu-btn {
-    color: #fff;
+    padding: 1.5rem 0rem;
+    text-align: center;
+    letter-spacing: .5rem;
+}
+
+.service-parent {
+    width: 70rem;
+    display: grid;
+    grid-gap: 1.5rem;
+    grid-template-columns: repeat(3,1fr);
+    margin: 0rem auto;
+    padding-bottom: 2rem;
+}
+.single-service {
+    background-color: #fff;
+    text-align: center;
+    color: black;
+    padding: 1rem 1rem;
+    border-radius: .5rem;
+    border:.2rem solid green ;
+    box-shadow: .5rem .5rem 1rem gray;
+}
+.single-service i {
     font-size: 2rem;
-    cursor: pointer;
-    display: none;
-  }
+}
+.single-service h2 {
+   margin: .2rem 0rem;
+   font-weight: bold;
+}
+/* First section mein area media query start  */
 
-  #click {
-    display: none;
-  }
 
-  @media only screen and (max-width: 940px) {
-    nav ul {
-      position: fixed;
-      top: 5rem;
-      left: -100%;
-      background-color: #16202A;
-      height: 100vh;
-      width: 100%;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      padding-top:1.5rem ;
-      transition: all 0.5s ease;
+@media only screen and (max-width:43rem){
+    .service-parent {
+        display: grid;
+        grid-gap: .5rem;
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;
     }
-    #click:checked ~ .manu-btn i::before {
-      content: "\f00d";
-    }
-    nav ul li {
-      margin: 5rem 0rem;
-    }
-    nav ul li a {
-      font-size: 2rem;
-    }
-    nav ul li a:hover, nav ul li a.active {
-      background: none;
-      color: red;
-    }
-    .manu-btn {
-      display: block;
-    }
-    
-  #click:checked ~ ul {
-    left: 0%;
-  }
-  }
+}
 
-  @media only screen and (min-height:280px) and (min-width: 653px) {
-    logo h3 {
-        font-size: .4rem;
+@media only screen and (min-width:43.1rem) and (max-width:69.8rem){
+    .service-parent {
+        height: 100%;
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        grid-gap: 1rem;
+        width: 100%;
+        background-color: #16213E;
     }
 }

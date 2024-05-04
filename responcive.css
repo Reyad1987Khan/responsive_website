@@ -1,0 +1,65 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.parent{
+    width: 1100px;
+    margin: 0 auto;
+    border: .1rem solid blue;
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+
+
+.div1{
+    background-color: red;
+}
+.div2{
+    background-color: green;
+}
+.div3{
+    background-color: blueviolet;
+}
+.div4{
+    background-color: brown;
+}
+.parent div{
+   height: 20rem;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+  display: grid;
+  place-items: center;
+  color: #fff;
+
+}
+
+@media only screen and (max-width: 688px) {
+    .parent{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        width: 100%;
+    }
+}
+@media only screen and (min-width: 689px) and (max-width: 992px) {
+    .parent{
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+        width:100%;
+    }
+    .div1{
+        background-color: rgb(187, 255, 0);
+    }
+    .div2{
+        background-color: rgb(154, 214, 154);
+    }
+    .div3{
+        background-color: rgb(38, 10, 65);
+    }
+    .div4{
+        background-color: rgb(117, 11, 11);
+    }
+
+}
+
+/* https://www.youtube.com/watch?v=hFP15-jaZtA&list=PLerpoOYRrjUx5IvEMJqfFagYWHZ1nGV7J&index=35 */
