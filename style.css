@@ -1,185 +1,448 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 *{
-    margin: 0;
     padding: 0;
+    margin: 0;
     box-sizing: border-box;
 }
-
 body{
-    font-family: "Montserrat", sans-serif;
+  font-family: "Montserrat", sans-serif;
 }
 
-.navigation{
+.navigation {
+    background-color: #1C2634;
+    width: 100%;
+    height: 4rem;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 0rem 3rem 0rem 3rem;
-    background-color: #1C2634;
-    height: 4rem;
-    width: 100%;
+}  
+.navigation ul {
+    display: flex;
+} 
 
-}
-
-.manu-btn {
-    display: none;
-}
-#click{
-    display: none;
-}
-
-.navigation ul{
-  display: flex;
-}
 .navigation ul li{
-  list-style-type: none;
-  margin: 0rem .6rem;
-}
+   margin: 0rem 1rem;
+   list-style-type: none;
+} 
 
 .navigation ul li a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    padding: .5rem .6rem;
-    text-transform: uppercase;
-    transition: .5s ease;
-    border-radius: .3rem;
-    }
-.navigation ul li a:hover,.navigation ul li a.active{
-     background: #667181;
-        }
+   text-decoration: none;
+   color: #fff;
+   text-transform: uppercase;
+   padding: .5rem 1rem;
+   transition: .5s ease;
+   border-radius: .5rem;
+ } 
 
-.logo{
+ #click{
+    display: none;
+}
+.manu-btn{
+    display: none;
+}
+ .navigation ul li a:hover,.navigation ul li a.active{
+    background-color: rgb(98, 151, 151);
+  } 
+
+
+.logo {
     display: flex;
     align-items: center;
+}
+.logo h3 {
+    color: #fff;
+    padding-left: 1rem;
+}
+.logo img{
+   height: 3rem;
+   width: 3rem;
+}
+
+
+
+
+
+
+   /* Header Section Design  */
+   .header {
+    background-image: url(./images/logo/pic.png);
+    height: 80vh;
+    width: 100%;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: cover;
+}
+.header h3 {
+    color: rgb(192, 174, 7);
+    font-size: 2rem;
+    padding-top: 8rem;
+    text-align: center;
+    text-shadow: .5rem .5rem 1rem rgb(14, 8, 65);
+}
+
+
+
+
+
+
+
+
+/* Services Section Design  */
+.first-section{
+    background-color: #16213E;
+   }
+   .first-section>h3 {
+       text-align: center;
+       color: rgb(139, 105, 10);
+       font-size: 1.2rem;
+       font-weight: bold;
+       letter-spacing: .5rem;
+       padding-top: 2rem;
+       text-transform: uppercase; 
+   }
+   .services {
+       width: 68.8rem;
+       margin: auto;
+       display: grid;
+       grid-template-columns:repeat(3,1fr);
+       grid-gap: 1rem;
+       padding: 2rem;
+   }
+   
+   .single-service {
+       text-align: center;
+       border: .1rem solid rgb(211, 173, 6);
+       padding: 1rem 1rem;
+       height: 10rem;
+       width: 100%;
+       box-shadow: .5rem .5rem 1rem green;
+   }
+   
+   .single-service p {
+       color: #fff;
+   }
+   .single-service h3 {
+       color: rgb(146, 148, 10);
+   }
+   .single-service i {
+       color: rgb(53, 95, 11);
+       font-size: 2rem;
+   }
+   
+
+
+
+
+
+
+
+
+
+/* Secont section Design Start  */
+.secont-section-parent{
+    background-color: #0E344F;
+}
+.secont-section-parent>h3{
+    color: #fff;
+    letter-spacing: .5rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: 1rem;
+}
+
+.secont-section {
+    width: 65rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0rem 3rem;
+}
+
+.image img{
+    height: 20rem;
+}
+
+.profile-details #p1{
+    color: #fff;
+    text-transform: uppercase;
+    letter-spacing: .5rem;
+    font-size: 1.5rem;
+}
+.profile-details #p2{
+    color: #fff;
+}
+
+.profile-details h3{
+    color: #d49203;
+    padding: .5rem 0rem;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.profile-details a {
+    color: #fff;
+    font-weight: bold;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-top: 1rem;
+    text-decoration: none;
+    border: .1rem solid gold;
+    padding: .5rem 2rem;
+    border-radius: .5rem;
+}
+
+.profile-details a:hover {
+    box-shadow: .5rem .5rem 1rem gold;
+    background-color: #596e06;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media only screen and (max-width:62rem) {
+    /* 992px  */
+    .services {
+        display: grid;
+        grid-gap: .5rem;
+        grid-template-columns: repeat(2,1fr);
+        width: 100%;
     }
 
-.logo img{
-    height: 3rem;
-    width: 3rem;
+
+    /* Secont Section Responsive  */
+
+.secont-section-parent{
+    background-color: #441604;
 }
-.logo h3{
-   color: #fff;
-   padding-left: 1rem;
+.secont-section-parent>h3{
+    color: #fff;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: .3rem;
 }
+
+.secont-section {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    padding: .8rem .8rem .8rem;
+    width: 100%;
+}
+.image {
+    margin: auto;
+    padding-bottom: .8rem;
+}
+
+.image img{
+    height: 15rem;
+    width: 100%;
+}
+
+.profile-details {
+   text-align: center;
+}
+.profile-details h3{
+   font-size: 1rem;
+ }
+ .profile-details #p1{
+    font-size: .8rem;
+  }
+  .profile-details a{
+        padding: .3rem .3rem;
+        font-size: .9rem;
+        transition: .5s ease;
+  }
+
+  .profile-details a:hover{
+    box-shadow: .1rem .1rem .1rem #034ab4;
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /* Media Breackpoint  */
-@media only screen and (max-width: 58.8rem) {
-    .navigation ul{
-        position: fixed;
-        flex-direction: column;
-        align-items: center;
-        top:4rem;
-        height: 100vh;
-        left: -100%;
-        width: 100%;
-        padding: 2rem;
-        background-color: #131D27;
-        /* Learn  */
-        transition: all .5s ease;
-    }
-    .navigation ul li{
-        padding: 4rem 0rem;
-    }
-    .navigation ul li{
-        font-size: 2rem;
-    }
-    /* Learn  */
-    .navigation ul li a:hover,.navigation ul li a.active{
-        background: none;
-        color: red;
-    }
-    .manu-btn{
-        display: block;
-        color: #fff;
-        font-size: 2rem;
-        cursor: pointer;
-    }
-    #click:checked ~ ul{
-        left:0%;
-    }
-    #click:checked ~ .manu-btn i::before{
-        content: "\f00d";
-    }
+    /* 940px width  */
+    @media only screen and (max-width:58.8rem) {
+        .navigation ul {
+            position: fixed;
+            top:4rem;
+            background-color:#131D27;
+            height: 100vh;
+            width: 100%;
+            flex-direction: column;
+            align-items: center;
+            padding-top:2rem;
+            left: -100%;
+            transition: all .5s ease;
+        }
+        .navigation ul li{
+           margin: 2rem 0rem;
+        }
+        .navigation ul li i{
+           color: #fff;
+           font-size: 1.2rem;
+         }
+        .navigation ul li a:hover,.navigation ul li a.active{
+            background: none;
+            color: red;
+         }
+        .manu-btn{
+            display: block;
+        }
+         #click:checked ~ ul {
+            left:0%;
+         }
+         .manu-btn {
+            color: #fff;
+            font-size: 1.2rem;
+         }
+         #click:checked ~ .manu-btn i::before{
+            content: "\f00d";
+         }
 
+/* Secont Section Responsive  */
+
+.secont-section-parent{
+    background-color: #343824;
 }
-
-/* Header Section start  */
-header {
-    background-image: url('./images/logo/pic.png');
-    height: 90vh;
-    background-repeat: no-repeat;
-    background-size:cover;
-    background-position: center ;
-}
-header h3 {
-    display: flex;
-    justify-content: center;
-    padding-top: 20rem;
-    color: blue;
-    font-size: 3rem;
-    text-shadow: 2px 2px 8px #eca011;
-}
-
-
-/* Services Part  */
-
-.first-section {
-    background-color: #16213E;
-    height: 100vh;
-}
-.first-section>h2{
-    color: #eca011;
-    font-size: 1.5rem;
-    padding: 1.5rem 0rem;
+.secont-section-parent>h3{
+    color: #fff;
+    letter-spacing: .2rem;
+    text-transform: uppercase;
     text-align: center;
-    letter-spacing: .5rem;
+    padding-top: .5rem;
 }
 
-.service-parent {
-    width: 70rem;
+.secont-section {
     display: grid;
-    grid-gap: 1.5rem;
-    grid-template-columns: repeat(3,1fr);
-    margin: 0rem auto;
-    padding-bottom: 2rem;
+    grid-template-columns: repeat(1,1fr);
+    padding: 1rem 1rem 1rem;
+    width: 100%;
 }
-.single-service {
-    background-color: #fff;
-    text-align: center;
-    color: black;
-    padding: 1rem 1rem;
-    border-radius: .5rem;
-    border:.2rem solid green ;
-    box-shadow: .5rem .5rem 1rem gray;
+.image {
+    margin: auto;
+    padding-bottom: 1rem;
 }
-.single-service i {
-    font-size: 2rem;
+
+.image img{
+    height: 20rem;
+    width: 100%;
 }
-.single-service h2 {
-   margin: .2rem 0rem;
-   font-weight: bold;
+
+.profile-details {
+   text-align: center;
 }
-/* First section mein area media query start  */
+.profile-details h3{
+   font-size: 1.2rem;
+ }
+ .profile-details #p1{
+    font-size: 1rem;
+  }
+  .profile-details a{
+        padding: .5rem .5rem;
+        font-size: .9rem;
+        transition: .5s ease;
+  }
+
+  .profile-details a:hover{
+    box-shadow: .3rem .3rem .3rem #d49203;
+}
+        
+    }
+    
 
 
 @media only screen and (max-width:43rem){
-    .service-parent {
+    .services {
         display: grid;
         grid-gap: .5rem;
         grid-template-columns: repeat(1,1fr);
         width: 100%;
     }
+
+
+    
+/* Secont Section Responsive  */
+
+.secont-section-parent{
+    background-color: #6e860b;
+}
+.secont-section-parent>h3{
+    color: #051e63;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    text-align: center;
+    padding-top: .3rem;
 }
 
-@media only screen and (min-width:43.1rem) and (max-width:69.8rem){
-    .service-parent {
-        height: 100%;
-        display: grid;
-        grid-template-columns: repeat(2,1fr);
-        grid-gap: 1rem;
-        width: 100%;
-        background-color: #16213E;
-    }
+.secont-section {
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    padding: .5rem .5rem .5rem;
+    width: 100%;
 }
+.image {
+    margin: auto;
+    padding-bottom: .5rem;
+}
+
+.image img{
+    height: 10rem;
+    width: 100%;
+}
+
+.profile-details {
+   text-align: center;
+}
+.profile-details h3{
+   font-size: 1rem;
+ }
+ .profile-details #p1{
+    font-size: .8rem;
+  }
+  .profile-details a{
+        padding: .3rem .3rem;
+        font-size: .6rem;
+        transition: .5s ease;
+  }
+
+  .profile-details a:hover{
+    box-shadow: .2rem .2rem .2rem #d49203;
+}
+
+
+.header {
+    background-image: url(./images/logo/pic.png);
+    height: 65vh;
+    width: 100%;
+    background-size: cover;
+    background-position: cover;
+}
+}
+
+/* https://www.youtube.com/watch?v=e3-noXM1rYE&list=PLerpoOYRrjUx5IvEMJqfFagYWHZ1nGV7J&index=43 */

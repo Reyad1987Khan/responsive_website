@@ -1,3 +1,13 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Website</title>
+    <!-- Font Wasome Link  -->
+    <script src="https://kit.fontawesome.com/059cb61c2d.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./style.css">
+</head>
 <body>
     <nav class="navigation">
         <div class="logo">
@@ -7,7 +17,6 @@
 
         <input type="checkbox" id="click">
         <label for="click" class="manu-btn"><i class="fas fa-bars"></i></label>
-
         <ul>
             <li><a class="active" href="#">home</a></li>
             <li><a href="#">gallary</a></li>
@@ -16,4 +25,46 @@
             <li><a href="#">contact</a></li>
         </ul>
     </nav>
+    <header>
+            <h3>Web Design and Development</h3>
+    </header>
+    <main>
+        <section class="first-section">
+            <h2>Our Services</h2>
+            <div class="service-parent">
+                <div class="single-service">
+                    <i class="fas fa-won-sign"></i> 
+                    <h2>Programming</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, labore!</p>
+                </div>
+                <div class="single-service">
+                    <i class="fas fa-database"></i> 
+                    <h2>DataBase</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, labore!</p>
+                </div>
+                <div class="single-service">
+                    <i class="fas fa-download"></i>
+                    <h2>Download</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, labore!</p>
+                </div>
+                <div class="single-service">
+                    <i class="fab fa-js"></i>
+                    <h2>JavaScript</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, labore!</p>
+                </div>
+                <div class="single-service">
+                    <i class="fab fa-python"></i> 
+                    <h2>Python</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, labore!</p>
+                </div>
+                <div class="single-service">
+                    <i class="fas fa-lock"></i>
+                    <h2>Cyber Security</h2>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quam, labore!</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
 </body>
+<!-- https://www.youtube.com/watch?v=e3-noXM1rYE&list=PLerpoOYRrjUx5IvEMJqfFagYWHZ1nGV7J&index=40  -->
